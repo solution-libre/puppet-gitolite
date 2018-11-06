@@ -122,6 +122,18 @@ describe 'gitolite', type: 'class' do
         cmd_install: 'gitolite setup -pk',
         group_name: 'gitolite3',
         user_name: 'gitolite3' },
+    'ubuntu1804' =>
+      { osfamily: 'Debian',
+        release: '18.04',
+        majrelease: '18',
+        lsbdistcodename: 'bionic',
+        packages: 'gitolite',
+        package_name: 'gitolite3',
+        gitolite_version: '3',
+        cmd_install: 'gitolite setup -pk',
+        group_name: 'gitolite3',
+        user_name: 'gitolite3'
+      },
     'sles12' =>
         { osfamily: 'Suse',
           release: '12.0',
@@ -375,7 +387,7 @@ describe 'gitolite', type: 'class' do
       it 'fails' do
         expect {
           is_expected.to contain_class('gitolite')
-        }.to raise_error(Puppet::Error, %r{gitolite supports Debian 6 \(squeeze\), 7 \(wheezy\), 8 \(jessie\) and 9 \(stretch\) and Ubuntu 10\.04 \(lucid\), 12\.04 \(precise\), 14.04 \(trusty\) and 16.04 \(xenial\). Detected lsbdistcodename is <etch>\.})
+	}.to raise_error(Puppet::Error, %r{gitolite supports Debian 6 \(squeeze\), 7 \(wheezy\), 8 \(jessie\) and 9 \(stretch\) and Ubuntu 10\.04 \(lucid\), 12\.04 \(precise\), 14\.04 \(trusty\), 16\.04 \(xenial\) and 18\.04 \(bionic\). Detected lsbdistcodename is <etch>\.})
       end
     end
 
@@ -389,7 +401,7 @@ describe 'gitolite', type: 'class' do
       it 'fails' do
         expect {
           is_expected.to contain_class('gitolite')
-        }.to raise_error(Puppet::Error, %r{gitolite supports Debian 6 \(squeeze\), 7 \(wheezy\), 8 \(jessie\) and 9 \(stretch\) and Ubuntu 10\.04 \(lucid\), 12\.04 \(precise\), 14.04 \(trusty\) and 16.04 \(xenial\). Detected lsbdistcodename is <hardy>\.})
+	}.to raise_error(Puppet::Error, %r{gitolite supports Debian 6 \(squeeze\), 7 \(wheezy\), 8 \(jessie\) and 9 \(stretch\) and Ubuntu 10\.04 \(lucid\), 12\.04 \(precise\), 14\.04 \(trusty\), 16\.04 \(xenial\) and 18\.04 \(bionic\). Detected lsbdistcodename is <hardy>\.})
       end
     end
 
