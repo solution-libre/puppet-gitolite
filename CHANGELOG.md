@@ -1,3 +1,11 @@
+## 2018-11-06 - Release 1.1.0
+### Summary
+This release adds support to Ubuntu Bionic and Debian Stretch and uses PDK 1.7.1.
+
+#### Features
+- Added support to Ubuntu 18.04.
+- Added support to Debian 9.
+
 ## 2017-02-28 - Release 1.0.0
 ### Summary
 This release fixes typo and  adds a lot of test improvements.
