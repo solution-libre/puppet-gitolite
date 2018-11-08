@@ -237,8 +237,8 @@ describe 'gitolite', type: 'class' do
     context 'when allow_local_code is set to valid bool <true>' do
       let(:params) { { allow_local_code: true } }
 
-      it { is_expected.to contain_file('gitolite_config').with_content(/^\s+LOCAL_CODE\s+=>\s+"\$ENV\{HOME\}\/local",/) }
-      it { is_expected.to contain_file('gitolite_config').with_content(/^\s+# LOCAL_CODE\s+=>\s+"\$rc\{GL_ADMIN_BASE\}\/local"/) }
+      it { is_expected.to contain_file('gitolite_config').with_content(%r{^\s+LOCAL_CODE\s+=>\s+"\$ENV\{HOME\}\/local",}) }
+      it { is_expected.to contain_file('gitolite_config').with_content(%r{^\s+# LOCAL_CODE\s+=>\s+"\$rc\{GL_ADMIN_BASE\}\/local"}) }
     end
 
     context 'when git_config_keys is set to valid string <.*>' do
@@ -265,14 +265,14 @@ describe 'gitolite', type: 'class' do
     context 'when allow_local_code and local_code_in_repo are set to valid bool <true>' do
       let(:params) { { allow_local_code: true, local_code_in_repo: true } }
 
-      it { is_expected.to contain_file('gitolite_config').with_content(/^\s+# LOCAL_CODE\s+=>\s+"\$ENV\{HOME\}\/local",$/) }
-      it { is_expected.to contain_file('gitolite_config').with_content(/^\s+LOCAL_CODE\s+=>\s+"\$rc\{GL_ADMIN_BASE\}\/local"/) }
+      it { is_expected.to contain_file('gitolite_config').with_content(%r{^\s+# LOCAL_CODE\s+=>\s+"\$ENV\{HOME\}\/local",$}) }
+      it { is_expected.to contain_file('gitolite_config').with_content(%r{^\s+LOCAL_CODE\s+=>\s+"\$rc\{GL_ADMIN_BASE\}\/local"}) }
     end
 
     context 'when local_code_path is set to valid path <dir>' do
       let(:params) { { local_code_path: 'dir' } }
 
-      it { is_expected.to contain_file('gitolite_config').with_content(/^\s+# LOCAL_CODE\s+=>\s+"\$ENV\{HOME\}\/dir",$/) }
+      it { is_expected.to contain_file('gitolite_config').with_content(%r{^\s+# LOCAL_CODE\s+=>\s+"\$ENV\{HOME\}\/dir",$}) }
     end
 
     context 'when manage_user is set to valid bool <false>' do
@@ -328,7 +328,7 @@ describe 'gitolite', type: 'class' do
       it 'fails' do
         expect {
           is_expected.to contain_class('gitolite')
-        }.to raise_error(Puppet::Error, /"foo\/bar" is not an absolute path/)
+        }.to raise_error(Puppet::Error, %r{"foo\/bar" is not an absolute path})
       end
     end
 
@@ -472,7 +472,7 @@ describe 'gitolite', type: 'class' do
 
             it 'fails' do
               expect {
-                is_expected.to contain_class(subject)
+                catalogue
               }.to raise_error(Puppet::Error, %r{#{var[:message]}})
             end
           end
