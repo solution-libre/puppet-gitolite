@@ -3,7 +3,7 @@
 [![Puppet Forge Version](http://img.shields.io/puppetforge/v/soli/gitolite.svg)](https://forge.puppetlabs.com/soli/gitolite)
 [![Puppet Forge Downloads](http://img.shields.io/puppetforge/dt/soli/gitolite.svg)](https://forge.puppetlabs.com/soli/gitolite)
 [![Puppet Forge Score](http://img.shields.io/puppetforge/f/soli/gitolite.svg)](https://forge.puppetlabs.com/soli/gitolite)
-[![Build Status](https://travis-ci.org/solution-libre/puppet-gitolite.svg?branch=master)](https://travis-ci.org/solution-libre/puppet-gitolite)
+[![Build Status](https://travis-ci.com/solution-libre/puppet-gitolite.svg?branch=master)](https://travis-ci.com/solution-libre/puppet-gitolite)
 
 #
 #### Table of Contents
