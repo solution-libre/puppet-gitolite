@@ -1,12 +1,12 @@
 {
-  "name": "echoes-gitolite",
+  "name": "soli-gitolite",
   "version": "1.0.0",
-  "author": "Echoes Technologies",
+  "author": "Solution Libre",
   "summary": "Puppet module to manage gitolite installation and configuration",
   "license": "Apache-2.0",
-  "source": "https://github.com/echoes-tech/puppet-gitolite",
-  "project_page": "https://github.com/echoes-tech/puppet-gitolite",
-  "issues_url": "https://github.com/echoes-tech/puppet-gitolite/issues",
+  "source": "https://github.com/solution-libre/puppet-gitolite",
+  "project_page": "https://github.com/solution-libre/puppet-gitolite",
+  "issues_url": "https://github.com/solution-libre/puppet-gitolite/issues",
   "tags": [
     "git"
   ],

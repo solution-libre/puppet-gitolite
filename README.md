@@ -1,24 +1,22 @@
 # gitolite
 
-[![Build Status](https://travis-ci.org/echoes-tech/puppet-gitolite.svg?branch=master)](https://travis-ci.org/echoes-tech/puppet-gitolite)
-[![Flattr Button](https://api.flattr.com/button/flattr-badge-large.png "Flattr This!")](https://flattr.com/submit/auto?user_id=echoes&url=https://forge.puppetlabs.com/echoes/gitolite&title=Puppet%20module%20to%20manage%20Gitolite&description=This%20module%20installs%20and%20configures%20Gitolite.&lang=en_GB&category=software "Puppet module to manage Gitolite installation and configuration")
+[![Puppet Forge Version](http://img.shields.io/puppetforge/v/soli/gitolite.svg)](https://forge.puppetlabs.com/soli/gitolite)
+[![Puppet Forge Downloads](http://img.shields.io/puppetforge/dt/soli/gitolite.svg)](https://forge.puppetlabs.com/soli/gitolite)
+[![Puppet Forge Score](http://img.shields.io/puppetforge/f/soli/gitolite.svg)](https://forge.puppetlabs.com/soli/gitolite)
+[![Build Status](https://travis-ci.org/solution-libre/puppet-gitolite.svg?branch=master)](https://travis-ci.org/solution-libre/puppet-gitolite)
 
+#
 #### Table of Contents
 
-1. [Overview](#overview)
-2. [Module Description - What the module does and why it is useful](#module-description)
-3. [Setup - The basics of getting started with gitolite](#setup)
+1. [Module Description - What the module does and why it is useful](#module-description)
+2. [Setup - The basics of getting started with gitolite](#setup)
     * [Setup requirements](#setup-requirements)
     * [Beginning with gitolite](#beginning-with-gitolite)
-4. [Usage - Configuration options and additional functionality](#usage)
-5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
-6. [Limitations - OS compatibility, etc.](#limitations)
-7. [Development - Guide for contributing to the module](#development)
-8. [Contributors](#contributors)
-
-## Overview
-
-Puppet module to manage Gitolite installation and configuration.
+3. [Usage - Configuration options and additional functionality](#usage)
+4. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
+5. [Limitations - OS compatibility, etc.](#limitations)
+6. [Development - Guide for contributing to the module](#development)
+7. [Contributors](#contributors)
 
 ## Module Description
 
@@ -101,7 +99,7 @@ Tells Puppet which Gitolite home directory to manage. Valid options: string cont
 
 Tells Puppet whether the `LOCAL_CODE` setting of `.gitolite.rc` file is set to a director in the gitolite-admin repository.  Must also set `allow_local_code` parameter to true. Valid options: boolean. Default value: false
 
-The value of `LOCAL_CODE` is $rc{GL_ADMIN_BASE}/local. This option is only available for Gitolite 3.
+The value of `LOCAL_CODE` is `$rc{GL_ADMIN_BASE}/local`. This option is only available for Gitolite 3.
 
 SECURITY WARNING: Enabling this setting will allow anyone with write access to the gitolite-admin repository to execute arbitrary code on the gitolite server.
 
@@ -146,10 +144,10 @@ RedHat and Debian family OSes are officially supported. Tested and built on Debi
 
 ## Development
 
-[Echoes Technologies](https://echoes.fr) modules on the Puppet Forge are open projects, and community contributions are essential for keeping them great.
+[Solution Libre](https://www.solution-libre.fr) modules on the Puppet Forge are open projects, and community contributions are essential for keeping them great.
 
-[Fork this module on GitHub](https://github.com/echoes-tech/puppet-gitolite/fork)
+[Fork this module on GitHub](https://github.com/solution-libre/puppet-gitolite/fork)
 
 ## Contributors
 
-The list of contributors can be found at: https://github.com/echoes-tech/puppet-gitolite/graphs/contributors
+The list of contributors can be found at: https://github.com/solution-libre/puppet-gitolite/graphs/contributors
