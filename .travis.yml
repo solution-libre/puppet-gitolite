@@ -31,7 +31,7 @@ matrix:
       env: PUPPET_GEM_VERSION="~> 4.0" CHECK=parallel_spec
       rvm: 2.1.9
     -
-      env: PUPPET_GEM_VERSION="~> 3.8" CHECK=spec
+      env: PUPPET_GEM_VERSION="~> 3.8" CHECK=parallel_spec
       rvm: 2.1.9
 branches:
   only:
