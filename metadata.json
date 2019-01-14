@@ -1,6 +1,6 @@
 {
   "name": "soli-gitolite",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "Solution Libre",
   "summary": "Puppet module to manage gitolite installation and configuration",
   "license": "Apache-2.0",
