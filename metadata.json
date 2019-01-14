@@ -1,6 +1,6 @@
 {
   "name": "soli-gitolite",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Solution Libre",
   "summary": "Puppet module to manage gitolite installation and configuration",
   "license": "Apache-2.0",
@@ -10,7 +10,7 @@
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
-      "version_requirement": ">= 4.6.0 < 6.0.0"
+      "version_requirement": ">= 4.6.0 < 7.0.0"
     }
   ],
   "operatingsystem_support": [

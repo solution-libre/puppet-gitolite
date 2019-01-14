@@ -1,3 +1,8 @@
+## 2019-01-14 - Release 1.2.0
+### Summary
+
+This release uses PDK 1.8.0 and claims compatibility with Puppet 6.0.
+
 ## 2018-11-06 - Release 1.1.0
 ### Summary
 This release adds support to Ubuntu Bionic and Debian Stretch and uses PDK 1.7.1.
